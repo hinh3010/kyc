@@ -1,0 +1,34 @@
+ .box-upload {
+     border-radius: 1rem;
+     border: 4px dashed #8b0a0a;
+     width: 100%;
+     min-height: 200px;
+     display: block;
+     background-color: #f5f9ff;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     flex-direction: column;
+     cursor: pointer;
+ }
+
+ .dnd {
+     font-size: 1.75rem;
+     color: #8b0a0a;
+     font-weight: bold;
+ }
+
+ .accept {
+     font-size: 1.25rem;
+     color: black;
+     font-weight: 500;
+     opacity: 0.5;
+     margin: 0.5rem;
+ }
+
+ .icon-upload {
+     width: 100px;
+     height: 100px;
+ }

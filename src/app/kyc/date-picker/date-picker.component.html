@@ -1,0 +1,8 @@
+<div class="date_picker">
+    <!-- <label [for]="id">{{title}}</label> -->
+    <mat-form-field>
+        <input [id]="id" matInput [matDatepicker]="picker" [placeholder]="title">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+</div>

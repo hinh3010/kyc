@@ -1,0 +1,51 @@
+<div class="wrapper">
+    <div class="left">
+        <div class="container">
+            <p class="title">Contact number</p>
+            <p class="desc">Contact number</p>
+            <p class="number">499,961</p>
+            <span class="line"></span>
+        </div>
+        <div class="container">
+            <p class="title">Contact number</p>
+            <p class="desc">Contact number</p>
+            <p class="number">499,961</p>
+            <span class="line"></span>
+        </div>
+        <div class="box-kyc">
+            <div class="container center">
+                <p class="title">KYC</p>
+                <p class="desc">KYC</p>
+                <p class="number">10</p>
+                <span class="line"></span>
+            </div>
+            <div class="container center">
+                <p class="title">KYC</p>
+                <p class="desc">KYC</p>
+                <p class="number">10</p>
+                <span class="line"></span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="container">
+            <div class="header">
+                <p class="title">Contact number</p>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <ul class="date_picker">
+                <li *ngFor="let item of dates; let i=index">
+                    <app-date-picker [title]="item.title" [id]="item.id"></app-date-picker>
+                </li>
+            </ul>
+
+
+            <app-table [tableData]="tableData" (onCheckAllEvent)="onCheckAllEvent($event)"></app-table>
+        </div>
+    </div>
+</div>

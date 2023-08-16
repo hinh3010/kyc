@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <table>
+        <thead>
+            <tr class="header">
+                <th class="checkbox">
+                    <input type="checkbox" name="" id="" (change)="onCheckAll($event)">
+                </th>
+                <th *ngFor="let item of tableData.headers; let i=index">{{item.label}}</th>
+            </tr>
+        </thead>
+        <tbody #tbodyRef>
+            <tr *ngFor="let row of tableData.rows; let i=index">
+                <th class="checkbox">
+                    <input type="checkbox" name="" [checked]="checkItems[i] ? checkItems[i] : false" [id]="row.id"
+                        (change)="onCheck($event)">
+                </th>
+                <td *ngFor="let column of tableData.headers; let j=index">{{row[column.key]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

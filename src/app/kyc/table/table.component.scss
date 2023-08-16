@@ -1,0 +1,41 @@
+.wrapper {
+    width: 100%;
+    overflow: overlay;
+
+    table {
+        border-collapse: collapse;
+        min-width: 100%;
+    }
+
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:not(:nth-child(even)) {
+        background-color: #eeeeee;
+    }
+
+    tr:not(.header):hover {
+        background-color: #dddddd;
+        cursor: pointer;
+    }
+
+    .header {
+        color: #8b0a0a;
+        height: 50px;
+
+        th {
+            text-align: center;
+            border: 1px solid #dddddd;
+        }
+    }
+
+    .checkbox {
+        width: 50px;
+        text-align: center;
+        border: 1px solid #dddddd;
+    }
+
+}
