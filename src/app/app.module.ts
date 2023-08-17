@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { KycComponent } from './kyc/kyc.component';
 import { KycModule } from './kyc/kyc.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +28,7 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     KycModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

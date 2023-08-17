@@ -1,4 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.grid {
+    display: grid;
+}
+
+@for $i from 1 through 12 {
+    .grid-cols-#{$i} {
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-span-#{$i} {
+        grid-column: span #{$i} / span #{$i};
+    }
+}
+
+@for $i from 1 through 12 {
+    .row-span-#{$i} {
+        grid-row: span #{$i} / span #{$i};
+    }
+}
