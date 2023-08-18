@@ -11,7 +11,8 @@ import {
   MatNativeDateModule,
   MatInputModule,
   MatTableModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatButtonModule
 } from '@angular/material';
 
 
@@ -28,7 +29,8 @@ import {
     MatNativeDateModule,
     MatInputModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatButtonModule
   ],
   exports: [
     MatGridListModule,
@@ -40,7 +42,8 @@ import {
     MatNativeDateModule,
     MatInputModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatButtonModule
   ]
 })
 export class MaterialModule { }

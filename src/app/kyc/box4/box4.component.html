@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <div class="container">
+        <div class="box" *ngFor="let item of inputData ; let i=index">
+            <div class="item" *ngFor="let input of item ; let j=index">
+                <app-input *ngIf="!!input" [name]="input.name" (onChange)="onChange($event)" [value]="input.value"
+                    [title]="input.title"></app-input>
+            </div>
+        </div>
+    </div>
+</div>

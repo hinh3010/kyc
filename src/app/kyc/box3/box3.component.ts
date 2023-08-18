@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-box3',
@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Box3Component implements OnInit {
 
-  file: any = null
+  showImg: boolean = false;
+  @ViewChild('imageElement', { static: true }) imageElement: ElementRef;
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelectFile(event: File) {
-    console.log({ event })
+  onSelectFile(file: File) {
+    this.showImg = true
+    const blobUrl = URL.createObjectURL(file)
+    this.imageElement.nativeElement.src = blobUrl;
   }
 
 }

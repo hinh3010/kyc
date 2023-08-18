@@ -1,5 +1,6 @@
 <div class="wrapper">
     <div class="container">
-        <app-upload (onSelectFile)="onSelectFile($event)"></app-upload>
+        <app-upload *ngIf="!showImg" (onSelectFile)="onSelectFile($event)"></app-upload>
+        <img [hidden]="!showImg" #imageElement style="width: 500px; height: auto;">
     </div>
 </div>
